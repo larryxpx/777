@@ -31,7 +31,7 @@ app.use("/api/", async (req, res) => {
     const url = req.query.url;
 
     // set screenshot ID & save path
-    const ID = generateID();
+    const ID = await generateID();
 
     const imageStorage = path.join(
       __dirname, + ID + ".png"
